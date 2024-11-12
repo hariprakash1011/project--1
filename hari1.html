@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Interface</title>
+  <style>* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  padding: 10px 15px;
+  background-color: #0073e6;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  display: inline-block;
+}
+
+#dropdown-toggle {
+  display: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  min-width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 10px 15px;
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #0073e6;
+  color: #fff;
+}
+
+#dropdown-toggle:checked + .dropdown-btn + .dropdown-content {
+  display: block;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-btn {
+  padding: 10px 20px;
+  background-color: #0073e6;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.search-btn:hover {
+  background-color: #005bb5;
+}
+</style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="search-container">
+  <div class="dropdown">
+    <input type="checkbox" id="dropdown-toggle">
+    <label for="dropdown-toggle" class="dropdown-btn">Everything</label>
+    <div class="dropdown-content">
+      <a href="#" data-category="Everything">Everything</a>
+      <a href="#" data-category="Software Development">Software Development</a>
+      <a href="#" data-category="Web Development">Web Development</a>
+      <a href="#" data-category="Data Analyst">Data Analyst</a>
+      <a href="#" data-category="IT Consultant">IT Consultant</a>
+      <a href="#" data-category="Network Administrator">Network Administrator</a>
+    </div>
+  </div>
+  <input type="text" class="search-input" placeholder="Type your search here...">
+  <button class="search-btn">Search</button>
+</div>
+
+</body>
+</html>
